@@ -52,3 +52,4 @@ insert into Product values
 	('Last row', 150)
 go
 
+truncate table product

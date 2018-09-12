@@ -33,11 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SellerBox = new System.Windows.Forms.ComboBox();
+            this.BuyerBox = new System.Windows.Forms.ComboBox();
+            this.TicketBox = new System.Windows.Forms.ComboBox();
+            this.QuantityBox = new System.Windows.Forms.ComboBox();
+            this.BuyBut = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,47 +82,48 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Quantity";
             // 
-            // comboBox1
+            // SellerBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.SellerBox.FormattingEnabled = true;
+            this.SellerBox.Location = new System.Drawing.Point(23, 136);
+            this.SellerBox.Name = "SellerBox";
+            this.SellerBox.Size = new System.Drawing.Size(121, 21);
+            this.SellerBox.TabIndex = 4;
             // 
-            // comboBox2
+            // BuyerBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(215, 136);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
+            this.BuyerBox.FormattingEnabled = true;
+            this.BuyerBox.Location = new System.Drawing.Point(215, 136);
+            this.BuyerBox.Name = "BuyerBox";
+            this.BuyerBox.Size = new System.Drawing.Size(121, 21);
+            this.BuyerBox.TabIndex = 5;
             // 
-            // comboBox3
+            // TicketBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(396, 136);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 6;
+            this.TicketBox.FormattingEnabled = true;
+            this.TicketBox.Location = new System.Drawing.Point(396, 136);
+            this.TicketBox.Name = "TicketBox";
+            this.TicketBox.Size = new System.Drawing.Size(121, 21);
+            this.TicketBox.TabIndex = 6;
             // 
-            // comboBox4
+            // QuantityBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(563, 136);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(84, 21);
-            this.comboBox4.TabIndex = 7;
+            this.QuantityBox.FormattingEnabled = true;
+            this.QuantityBox.Location = new System.Drawing.Point(563, 136);
+            this.QuantityBox.Name = "QuantityBox";
+            this.QuantityBox.Size = new System.Drawing.Size(84, 21);
+            this.QuantityBox.TabIndex = 7;
             // 
-            // button1
+            // BuyBut
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(702, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 32);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Buy";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BuyBut.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BuyBut.Location = new System.Drawing.Point(702, 125);
+            this.BuyBut.Name = "BuyBut";
+            this.BuyBut.Size = new System.Drawing.Size(82, 32);
+            this.BuyBut.TabIndex = 8;
+            this.BuyBut.Text = "Buy";
+            this.BuyBut.UseVisualStyleBackColor = true;
+            this.BuyBut.Click += new System.EventHandler(this.BuyBut_Click);
             // 
             // dataGridView1
             // 
@@ -139,11 +140,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(796, 398);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BuyBut);
+            this.Controls.Add(this.QuantityBox);
+            this.Controls.Add(this.TicketBox);
+            this.Controls.Add(this.BuyerBox);
+            this.Controls.Add(this.SellerBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -162,11 +163,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox SellerBox;
+        private System.Windows.Forms.ComboBox BuyerBox;
+        private System.Windows.Forms.ComboBox TicketBox;
+        private System.Windows.Forms.ComboBox QuantityBox;
+        private System.Windows.Forms.Button BuyBut;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
