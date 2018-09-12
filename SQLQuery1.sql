@@ -1,5 +1,5 @@
-create database IceShops
-use IceShops
+create database TicketShops
+use TicketShops
 go
 
 create table Seller (
@@ -26,4 +26,29 @@ create table Sales (
 	foreign key (id_Seller) references Seller(id),
 	id_Buyer int not null,
 	foreign key (id_Buyer) references Buyer(id),
-	id)
+	id_Product int not null,
+	foreign key (id_Product) references Product(id))
+go
+
+insert into Seller values 
+	('Fedor', 'Lomonosov'),
+	('Sergey', 'Kravchenko'),
+	('Alexander', 'Snijko'),
+	('Jora', 'Kornev')
+go
+
+insert into Buyer values
+	('Katia', 'Prusnikina'),
+	('Anastasia', 'Slobkina'),
+	('Egor', 'Chegurko'),
+	('Jora', 'Cheberyachko')
+go
+
+insert into Product values
+	('VIP', 50),
+	('Balcony', 35),
+	('First row', 33),
+	('Middle row', 100),
+	('Last row', 150)
+go
+
